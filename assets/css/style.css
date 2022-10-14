@@ -42,7 +42,26 @@ aside {
 nav {
 
 }
+.inputIcon i {
+    position: absolute;
+    margin-top: 12px;
+}
+.inputIcon {
+    width: 100%;
+    margin-bottom: 10px;
+}
 
+.icon {
+    padding: 10px;
+    min-width: 40px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 3px;
+}
 /* Section formatting */
 section {
 
