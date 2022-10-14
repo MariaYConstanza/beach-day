@@ -23,11 +23,11 @@ header {
 
 }
 
+/* Banner image needs to be turned in a flex -MARIA */
 .banner {
     height: 150px;
     width: 100%;
     background-image: url(../img/header.png);
-    
 }
 
 /*Background formatting, font, and color*/
@@ -47,8 +47,14 @@ aside {
 
 /*Nav bar within header formatting, font, and color*/
 nav {
-
+    
 }
+
+nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
 .inputIcon i {
     position: absolute;
     margin-top: 12px;
