@@ -23,6 +23,12 @@ header {
 
 }
 
+.banner {
+    height: 250px;
+    width: 100%;
+    background-image: url(../img/header.png);
+}
+
 /*Background formatting, font, and color*/
 body {
 
