@@ -43,7 +43,7 @@ A special thanks to my daughter, Yennefer. Every day she proves she is small but
 <!-- Add links using the following format: -->
 <!-- * Link subject: [Link title](https://www.link.com/) -->
 * Deployed site: [Live site-404pandas](linkToLiveSiteHere)
-* Github repo: [Github-404pandas](linkToRepoHere)
+* Github repo: [Github-MariaYConstanza](https://github.com/MariaYConstanza/beach-day)
 
 ## Screenshots
 <!-- Add screenshots using the following format: -->
