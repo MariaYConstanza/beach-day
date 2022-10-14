@@ -31,7 +31,10 @@ header {
 
 /*Background formatting, font, and color*/
 body {
-
+background-image: url("/assets/img/Owen\ Wilson.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 
 /* Heading formatting, font, and color */
@@ -50,11 +53,13 @@ nav {
 }
 .inputIcon i {
     position: absolute;
-    margin-top: 12px;
+    margin-top: 18px;
+    padding-left: 8px;
 }
 .inputIcon {
     width: 100%;
     margin-bottom: 10px;
+   
 }
 
 .icon {
@@ -66,7 +71,7 @@ nav {
     width: 100%;
     padding: 10px;
     text-align: center;
-    margin-bottom: 3px;
+    margin-bottom: 0px;
 }
 /* Section formatting */
 section {
