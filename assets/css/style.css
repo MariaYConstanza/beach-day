@@ -1,0 +1,165 @@
+/* Reminder: delete empty rulesets */
+
+/* ****************************** */
+/*       Universal selector       */
+/* ****************************** */
+* {
+
+}
+
+/* ****************************** */
+/*        Color selectors         */
+/* ****************************** */
+:root {
+--variableName: #000000;
+}
+
+/* ****************************** */
+/*       Element selectors        */
+/* ****************************** */
+
+/*Header formatting, font, and color*/
+header {
+
+}
+
+/*Background formatting, font, and color*/
+body {
+
+}
+
+/* Heading formatting, font, and color */
+h1 {
+
+}
+
+/* Aside headers formatting, font, and color */
+aside {
+
+}
+
+/*Nav bar within header formatting, font, and color*/
+nav {
+
+}
+
+/* Section formatting */
+section {
+
+}
+
+/* Article formatting */
+article { 
+
+}
+
+/*Paragraph formatting, font, and color*/
+p {
+
+}
+
+/* ****************************** */
+/*        Class selectors         */
+/* ****************************** */
+
+/*Header formatting, font, and color*/
+.header {
+
+}
+
+/*Background formatting, font, and color*/
+.body {
+
+}
+
+/* Heading formatting, font, and color */
+.h1 {
+
+}
+
+/* Aside headers formatting, font, and color */
+.aside {
+
+}
+
+/*Nav bar within header formatting, font, and color*/
+.nav {
+
+}
+
+/* Section formatting */
+.section {
+
+}
+
+/* Article formatting */
+.article { 
+
+}
+
+/*Paragraph formatting, font, and color*/
+.p {
+
+}
+
+/* ****************************** */
+/*          ID selectors          */
+/* ****************************** */
+/*Header formatting, font, and color*/
+#header {
+
+}
+
+/*Background formatting, font, and color*/
+#body {
+
+}
+
+/* Heading formatting, font, and color */
+#h1 {
+
+}
+
+/* Aside headers formatting, font, and color */
+#aside {
+
+}
+
+/*Nav bar within header formatting, font, and color*/
+#nav {
+
+}
+
+/* Section formatting */
+#section {
+
+}
+
+/* Article formatting */
+#article { 
+
+}
+
+/*Paragraph formatting, font, and color*/
+#p {
+
+}
+
+/* ****************************** */
+/* Formatting for media inquiries */
+/* ****************************** */
+
+/* Laptop */
+@media screen and (max-width: 1024px) {
+
+}
+
+/* iPads and Tablets */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+
+}
