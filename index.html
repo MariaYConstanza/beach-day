@@ -18,68 +18,57 @@
 <body>
     <header class="banner">
         <h1>WOW; Waves Over Work</h1>
-        <nav  class="bg-light-800">
-            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div class="relative flex h-16 items-center justify-between">
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <!-- Mobile menu button-->
-                  <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                    
-                    <!--
-                      Icon when menu is closed.
-          
-                      Heroicon name: outline/bars-3
-          
-                      Menu open: "hidden", Menu closed: "block"
-                    -->
-                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                    <!--
-                      Icon when menu is open.
-          
-                      Heroicon name: outline/x-mark
-          
-                      Menu open: "block", Menu closed: "hidden"
-                    -->
-                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  
-                  <div class="hidden sm:ml-6 sm:block">
-                    <div class="flex space-x-4">
-                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                      <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
-          
-                      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
-          
-                      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-          
-                      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                
-            </div>
-          
-            <!-- Mobile menu, show/hide based on menu state. -->
-            <div class="sm:hidden" id="mobile-menu">
-              <div class="space-y-1 px-2 pt-2 pb-3">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-          
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-          
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-          
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-              </div>
-            </div>
-
+        <nav  class="
+        relative
+        w-full
+        flex flex-wrap
+        items-center
+        justify-between
+        py-4
+        bg-gray-100
+        text-gray-500
+        hover:text-gray-700
+        focus:text-gray-700
+        shadow-lg
+        navbar navbar-expand-lg navbar-light
+        ">
+        <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+        <button class="
+            navbar-toggler
+            text-gray-500
+            border-0
+            hover:shadow-none hover:no-underline
+            py-2
+            px-2.5
+            bg-transparent
+            focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline
+          " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+          class="w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path fill="currentColor"
+            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+          </path>
+        </svg>
+        </button>
+        <div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
+        <a class="text-xl text-black" href="#">Navbar</a>
+        <!-- Left links -->
+        <ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
+          <li class="nav-item px-2">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item pr-2">
+            <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Features</a>
+          </li>
+          <li class="nav-item pr-2">
+            <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Pricing</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+        </div>
         </nav>
     </header>
     <figure></figure>
