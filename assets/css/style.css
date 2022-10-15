@@ -30,12 +30,12 @@ header {
 }
 
 /*Background formatting, font, and color*/
-/* body {
-background-image: url("../img/Owen_Wilson.jpg");
+body {
+background-image: url("/assets/img/Owen\ Wilson.jpg");
 background-size: cover;
 background-repeat: no-repeat;
-background-attachment: fixed;
-} */
+background-attachment: scroll;
+} 
 
 /* Heading formatting, font, and color */
 h1 {
@@ -179,7 +179,7 @@ p {
 /* must have defined height and width to appear */
 #viewDiv {
     padding: 0;
-    margin: 0;
+    margin: 30px;
     min-height: 450px;
     height: 450px;
     width: 70%;
