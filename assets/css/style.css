@@ -50,11 +50,6 @@ nav {
     
 }
 
-nav ul li {
-    display: inline-block;
-    margin-left: 30px;
-}
-
 .inputIcon i {
     position: absolute;
     margin-top: 12px;
