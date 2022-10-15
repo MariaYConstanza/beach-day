@@ -30,12 +30,12 @@ header {
 }
 
 /*Background formatting, font, and color*/
-body {
-background-image: url("/assets/img/Owen\ Wilson.jpg");
+/* body {
+background-image: url("../img/Owen_Wilson.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
-}
+} */
 
 /* Heading formatting, font, and color */
 h1 {
@@ -173,6 +173,16 @@ p {
 /*Paragraph formatting, font, and color*/
 #p {
 
+}
+
+/* Map */
+/* must have defined height and width to appear */
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    min-height: 450px;
+    height: 450px;
+    width: 70%;
 }
 
 /* ****************************** */

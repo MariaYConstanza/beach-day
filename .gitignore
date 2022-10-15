@@ -1,3 +1,9 @@
+# DS_Store
+.DS_Store
+
+#config - locally held API key
+config.js
+
 # Logs
 logs
 *.log
