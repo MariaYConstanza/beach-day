@@ -23,117 +23,53 @@
 
 <body>
     <header class="banner">
-        <h1>WOW; Waves Over Work</h1>
+        <h1>Waves Over Work</h1>
         <nav class="bg-light-800">
             <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                <div class="relative flex h-16 items-center justify-between">
-                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <!-- Mobile menu button-->
-                        <button type="button"
-                            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                            aria-controls="mobile-menu" aria-expanded="false">
+                <div class=" flex h-16 justify-end content-end">
+                    <div class="sm:items-stretch sm:justify-start">
 
-                            <!--
-                      Icon when menu is closed.
-          
-                      Heroicon name: outline/bars-3
-          
-                      Menu open: "hidden", Menu closed: "block"
-                    -->
-                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg>
-                            <!--
-                      Icon when menu is open.
-          
-                      Heroicon name: outline/x-mark
-          
-                      Menu open: "block", Menu closed: "hidden"
-                    -->
-                            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-
-                        <div class="hidden sm:ml-6 sm:block">
-                            <div class="flex space-x-4">
+                        <div class="sm:ml-6 sm:block">
+                            <div class="flex">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                                     aria-current="page">Dashboard</a>
 
                                 <a href="#"
-                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About
+                                    Us</a>
 
                                 <a href="#"
                                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
 
-                                <a href="#"
-                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
+                                <a href="https://www.surfrider.org/"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Donate</a>
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
-                    </div>
-
-                    <!-- Mobile menu, show/hide based on menu state. -->
-                    <div class="sm:hidden" id="mobile-menu">
-                        <div class="space-y-1 px-2 pt-2 pb-3">
-                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-                                aria-current="page">Dashboard</a>
-
-                            <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-
-                            <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-
-                            <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-                        </div>
-                    </div>
-
         </nav>
     </header>
+
     <main>
         <!--Flexbox containing search box and map-->
         <div class="flex flex-row">
-        <!--Search Box Container-->
-        <div id="searchForm" class="flex flex-col justify-between h-80 ml-3 p-3 rounded-lg bg-gray-600 w-1/4 mt-2">
-            <div class="inline inputIcon">
-                <button type="button"><i class="fas fa-search"></i></button>
-                <input type="text" id=“beachInput” class="border rounded inputField"/>
+            <!--Search Box Container-->
+            <div id="searchForm" class="flex flex-col justify-between h-80 ml-3 p-3 rounded-lg bg-gray-600 w-1/4 mt-2">
+                <div class="inline inputIcon">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                    <input type="text" id=“beachInput” class="border rounded inputField" />
+                </div>
+                <p class="text-gray-700 text-base mb-4"></p>
+                <button type="button"
+                    class="px-3 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-white focus:shadow-lg focus:outline-none bg-clip-padding active:shadow-lg">Display
+                    map</button>
             </div>
-            <p class="text-gray-700 text-base mb-4"></p>
-            <button type="button"
-                class="px-3 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-white focus:shadow-lg focus:outline-none bg-clip-padding active:shadow-lg">Display
-                map</button>
+            <!-- this displays the map -Taber -->
+            <div id="viewDiv"></div>
         </div>
-        <!-- this displays the map -Taber -->
-        <div id="viewDiv"></div>
+        <div>
+            <h2 class="text-white">About Us</h2>
         </div>
-        
-        <section>
-            <article>
-                <h2></h2>
-                <p></p>
-            </article>
-            <article>
-                <h2></h2>
-                <p></p>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <nav></nav>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
