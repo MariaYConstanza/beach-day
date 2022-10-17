@@ -31,10 +31,14 @@
 
                         <div class="sm:ml-6 sm:block">
                             <div class="flex">
-                                <!-- Direct links -->
-                                <a href="#"
-                                    class="px-5 py-2 rounded-md text-sm font-medium custom-about">About
-                                    Us</a>
+
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    aria-current="page">Dashboard</a>
+
+                                <a href="#aboutUs"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About
+                                    us</a>
 
                                 <a href="#"
                                     class="px-5 py-2 rounded-md text-sm font-medium custom-projects">Projects</a>
@@ -49,12 +53,12 @@
 
     <main>
         <!--Flexbox containing search box and map-->
-        <div class="flex flex-row">
+        <div class="flex flex-row mb-20 pb-4">
             <!--Search Box Container-->
             <div id="searchForm" class="flex flex-col justify-between h-80 ml-3 p-3 rounded-lg bg-gray-600 w-1/4 mt-2">
                 <div class="inline inputIcon">
                     <button type="button"><i class="fas fa-search"></i></button>
-                    <input type="text" id=“beachInput” class="border rounded inputField" />
+                    <input type="text" id=“beachInput” class="border rounded inputField"/>
                 </div>
                 <p class="text-gray-700 text-base mb-4"></p>
                 <button type="button"
@@ -64,8 +68,58 @@
             <!-- this displays the map -Taber -->
             <div id="viewDiv"></div>
         </div>
-        <div>
-            <h2 class="text-white">About Us</h2>
+
+        <div id="aboutUs" class="flex flex-nowrap content-evenly mb-20">
+            <h1 class="text-white pl-6 pr-10 heading">About Us</h1>
+            <p class="text-white pl-3 pr-3">As a group of aspiring software developers based out of Florida, we created this application to provide our users with the most up-to-date weather conditions to help our fellow surfers catch the biggest wave. Track tide activity, water levels and more to grab your board and plan your next "sick" day. If you would like to view more of our collaborators' work, please check out our GitHub profiles to view our past and/or ongoing projects below! </p>
+        </div>
+
+        <div class="flex content-evenly mb-20">
+            <h1 class="text-white pl-6 pr-10 heading">Projects</h1>
+            <div id="carouselExampleControls" class="carousel slide relative pl-3 pr-3" data-bs-ride="carousel">
+                <div class="carousel-inner relative w-full overflow-hidden">
+                  <div class="carousel-item active relative float-left w-full">
+                    <img
+                      src="./assets/img/carousel pic 1.jpg"
+                      class="block w-full"
+                      alt="Stacked Boards"/>
+                  </div>
+                  <div class="carousel-item relative float-left w-full">
+                    <img
+                      src="./assets/img/carouself pic 2.jpg"
+                      class="block w-full"
+                      alt="Van on Beach"/>
+                  </div>
+                  <div class="carousel-item relative float-left w-full">
+                    <img
+                      src="./assets/img/carousel pic 3.jpg"
+                      class="block w-full"
+                      alt="Lined Up Boards"/>
+                  </div>
+                  <div class="carousel-item relative float-left w-full">
+                    <img
+                      src="./assets/img/carousel pic 4.jpg"
+                      class="block w-full"
+                      alt="Board in Sand"/>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     <script src="./assets/js/script.js"></script>
