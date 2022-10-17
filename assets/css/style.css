@@ -44,8 +44,8 @@ background-attachment: scroll;
 } 
 
 /* Heading formatting, font, and color */
-h1 {
-
+.heading {
+font-size: 50px;
 }
 
 /* Aside headers formatting, font, and color */
