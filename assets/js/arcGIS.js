@@ -1,3 +1,18 @@
+// This calls the API, just update the url to have your key's name.
+async function fetchKey() {
+    const url = 'https://yorkieportunus.herokuapp.com/store/beachDayApp'
+    const response = await fetch(url);
+    const key = await response.json();
+    return key;
+}
+// Call this wherever you need your key.
+fetchKey().then((key) => {
+    secretKey = key.apiKey;
+
+});
+
+
+
 // script for map API
 function generateMap() {
     // arcGIS API call logic
@@ -9,7 +24,7 @@ function generateMap() {
 
 
     ], function (esriConfig, Map, MapView, locator) {
-        esriConfig.apiKey = config.myKey;
+        esriConfig.apiKey = secretKey;
 
         const map = new Map({
             basemap: "oceans", // Basemap layer service
@@ -49,25 +64,6 @@ function generateMap() {
                     location: pt
                 });
 
-                // calls weather.gov API for lattitude and longitude based weather
-                function check(long, lat){
-                    console.log(long);
-                    console.log(lat);
-                    fetch("https://api.weather.gov/points/"+lat+","+long)
-                    .then(function (response){
-                        return response.json();
-                    })
-                    .then (function (data) {
-                        console.log(data.properties.forecast);
-                        fetch(data.properties.forecast)
-                        .then(function (resposne2){
-                            return resposne2.json();
-                        })
-                        .then(function (data2) {
-                            console.log(data2)
-                        })}
-                    )
-                };
 
                 check(long, lat);
             }
@@ -75,7 +71,78 @@ function generateMap() {
     });
 };
 
+// calls weather.gov API for lattitude and longitude based weather
+function check(long, lat) {
+    console.log(long);
+    console.log(lat);
+    fetch("https://api.weather.gov/points/" + lat + "," + long)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data.properties.forecast);
+            fetch(data.properties.forecast)
+                .then(function (resposne2) {
+                    return resposne2.json();
+                })
+                .then(function (data2) {
+                    console.log(data2)
+                })
+        }
+        )
+};
+// event for click to take input and set map to that location
+// pass input to set the center in function, start map on "display map" click
+// if no input, generate map to start at Miami
+// need to add features to map to include wind, tide, weather ect.
 
+// https://api.tidesandcurrents.noaa.gov/api/prod/#requestResponse
+// weather.gov tides specific API
+var stationID = [
+    {
+        name: "Fernandian Beach",
+        lat: "",
+        lon: "",
+        number: "8720030"
+    },
+    {
+        name: "Southbank Riverwalk, St Johns River",
+        lat: "",
+        lon: "",
+        number: "8720226"
+    },
+    {
+        name: "Lake Worth Pier",
+        lat: "",
+        lon: "",
+        number: "8722670"
+    },
+]
+function stationData() {
+    fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8726724.json?expand=details,tidepredoffsets&units=english")
+        .then(function (response) {
+            console.log(response);
+            return response.json()
+        })
+        .then(function (data) {
+            console.log(data)
+            // data.stations[0].lat //lat of station
+            // data.stations[0].lng //lon of station
+            // data.stations[0].name //name of station
+            // data.stations[0].tidePredOffsets.
+            fetch(data.stations[0].supersededdatums.self)
+                .then(function (response2) {
+                    console.log(response2)
+                    return response2.json()
+                })
+                .then(function (data2) {
+                    console.log(data2)
+                })
 
+        })
+}
 
+// get noaa tide data - from their website -> link to their page via fetch.then
+
+stationData();
 generateMap();
