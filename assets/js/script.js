@@ -1255,10 +1255,10 @@ var stationID = {
 }
 // targets user input 
 var displayBtn = document.getElementById('displayMap');
-function getStation(){
+function getStation() {
     var beachInputTarget = document.getElementById('beachInput');
     // base start point with no input || not listed
-    if (beachInputTarget.value.trim() === ""){
+    if (beachInputTarget.value.trim() === "") {
         var longitude = "-80.1500";
         var latitude = "25.7600";
         var theStation = stationID.florida[8].stationNumber
@@ -1267,7 +1267,7 @@ function getStation(){
         // else if statements for each location
     } else if (beachInputTarget.value.trim() == "washington") {
         var theStation = stationID.washington[0].stationNumber;
-       stationData(theStation);
+        stationData(theStation);
     } else {
         console.log("try again")
     }
@@ -1309,9 +1309,12 @@ function stationData(theStation) {
         })
 }
 
-
-
-displayBtn.addEventListener("click", function(event){
+var submitBtn = document.querySelector('.btn-info')
+submitBtn.addEventListener('click', function(event){
+    event.preventDefault();
+        getStation();
+})
+displayBtn.addEventListener("click", function (event) {
     event.preventDefault();
     getStation();
 })
