@@ -31,9 +31,12 @@
 
 /* Banner image needs to be turned in a flex -MARIA */
 .banner {
-  height: 185px;
-  width: 100%;
-  background-image: url(../img/header.png);
+
+    height: 185px;
+    width: 100%;
+    background-image: url(../img/header.png);
+    border-bottom: 2px solid var(--Drk-Blue);
+
 }
 
 .wow-logo {
@@ -53,12 +56,14 @@ body {
 
 /*Nav bar within header formatting, font, and color*/
 .custom-nav {
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  height: 40px;
-  background-color: var(--Med-Blue);
+
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 40px;
+    background-color: var(--Med-Blue);
+
 }
 
 .flex a {
@@ -138,27 +143,51 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .customLinkDiv {
-  text-align: center;
-  justify-content: center;
-  font-family: var(--Mich);
-  color: var(--Lht-Blue);
-  z-index: 5;
-  height: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--Mich);
+    color: var(--Lht-Blue);
+    z-index: 2;
+    height: 200px;
 }
 .customBtn {
-  height: 30px;
-  width: 50px;
-  color: black;
-  font-family: var(--Mich);
-  font-weight: bold;
-  z-index: 5;
+    margin:5px;
+    padding: 5px;
+    height: 50px;
+    width: fit-content;
+    color: var(--Lht-Blue);
+    background-color: rgba(0,0,0,.5);
+    font-family: var(--Mich);
+    font-weight: bold;
+    z-index: 2;
 }
 .customForecast {
-  font-family: var(--Mich);
-  width: fit-content;
-  height: fit-content;
-  background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-evenly;
+    margin: 0 5px 0 5px;
+    padding: 2px;
+    font-family: var(--Mich);
+    color: var(--Lht-Blue);
+    width: auto;
+    height: fit-content;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 3%;
 }
+.generatedLinks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Map */
 /* must have defined height and width to appear */
 #viewDiv {
