@@ -12,9 +12,6 @@ fetchKey().then((key) => {
 
 });
 
-
-
-
 // script for map API
 function generateMap(longitude, latitude) {
     // if statements for generated longitude and latitude
@@ -42,7 +39,7 @@ function generateMap(longitude, latitude) {
             container: "viewDiv", //html id location for map
             map: map,
             center: [longitude, latitude], //starting location of map -- longitude, latitude
-            zoom: 13
+            zoom: 10
         });
         // API call for arcGIS location
         const serviceUrl = "http://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer";
@@ -55,7 +52,6 @@ function generateMap(longitude, latitude) {
             // takes click location and generates closest address to clicked location
             locator.locationToAddress(serviceUrl, params)
                 .then(function (response) { // Show the address found
-                    console.log(response.address)
                     const address = response.address;
                     showAddress(address, evt.mapPoint);
                 }, function (err) { // Show no address found
@@ -63,50 +59,40 @@ function generateMap(longitude, latitude) {
                 });
             // generates the longitude and latitude then displays it at point of click within API widget
             function showAddress(address, pt) {
-                var long = Math.round(pt.longitude * 10000) / 10000;
-                var lat = Math.round(pt.latitude * 10000) / 10000;
+                var longitude = Math.round(pt.longitude * 10000) / 10000;
+                var latitude = Math.round(pt.latitude * 10000) / 10000;
                 view.popup.open({
                     title: + Math.round(pt.longitude * 100000) / 100000 + ", " + Math.round(pt.latitude * 100000) / 100000,
                     content: address,
                     location: pt
                 });
+                check(longitude, latitude);
 
 
-                check(long, lat);
             }
         });
     });
 };
 
-// calls weather.gov API for lattitude and longitude based weather
-function check(long, lat) {
-    console.log(long);
-    console.log(lat);
-    fetch("https://api.weather.gov/points/" + lat + "," + long)
+// calls weather.gov API for latitude and longitude based weather
+function check(longitude, latitude) {
+    fetch("https://api.weather.gov/points/" + latitude + "," + longitude)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data.properties.forecast);
-            fetch(data.properties.forecast)
-                .then(function (resposne2) {
-                    return resposne2.json();
-                })
-                .then(function (data2) {
-                    console.log(data2)
-                })
+            if (data.length > 0) {
+                console.log(data.properties.forecast);
+                fetch(data.properties.forecast)
+                    .then(function (resposne2) {
+                        return resposne2.json();
+                    })
+                    .then(function (data2) {
+                        console.log(data2);
+                        console.log(data2.properties.periods[0]); //current weather
+                    })
+            }
         }
         )
+    getWow();
 };
-// event for click to take input and set map to that location
-// pass input to set the center in function, start map on "display map" click
-// if no input, generate map to start at Miami
-// need to add features to map to include wind, tide, weather ect.
-
-// https://api.tidesandcurrents.noaa.gov/api/prod/#requestResponse
-// weather.gov tides specific API
-
-
-
-// generateMap();
-

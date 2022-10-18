@@ -1,13 +1,6 @@
 /* Reminder: delete empty rulesets */
 
 /* ****************************** */
-/*       Universal selector       */
-/* ****************************** */
-* {
-
-}
-
-/* ****************************** */
 /*        Color selectors         */
 /* ****************************** */
 :root {
@@ -23,11 +16,6 @@
 /* ****************************** */
 /*       Element selectors        */
 /* ****************************** */
-
-/*Header formatting, font, and color*/
-header {
-
-}
 
 .title-page {
     font-family: var(--Mich);
@@ -126,107 +114,6 @@ background-attachment: scroll;
     font-weight: bold;
     color: var(--Lht-Blue);
     background-color: rgba(0,0,0,.5)
-}
-/* Section formatting */
-section {
-
-}
-
-/* Article formatting */
-article { 
-
-}
-
-/*Paragraph formatting, font, and color*/
-p {
-
-}
-
-/* ****************************** */
-/*        Class selectors         */
-/* ****************************** */
-
-/*Header formatting, font, and color*/
-.header {
-
-}
-
-/*Background formatting, font, and color*/
-.body {
-
-}
-
-/* Heading formatting, font, and color */
-.h1 {
-
-}
-
-/* Aside headers formatting, font, and color */
-.aside {
-
-}
-
-/*Nav bar within header formatting, font, and color*/
-.nav {
-
-}
-
-/* Section formatting */
-.section {
-
-}
-
-/* Article formatting */
-.article { 
-
-}
-
-/*Paragraph formatting, font, and color*/
-.p {
-
-}
-
-/* ****************************** */
-/*          ID selectors          */
-/* ****************************** */
-/*Header formatting, font, and color*/
-#header {
-
-}
-
-/*Background formatting, font, and color*/
-#body {
-
-}
-
-/* Heading formatting, font, and color */
-#h1 {
-
-}
-
-/* Aside headers formatting, font, and color */
-#aside {
-
-}
-
-/*Nav bar within header formatting, font, and color*/
-#nav {
-
-}
-
-/* Section formatting */
-#section {
-
-}
-
-/* Article formatting */
-#article { 
-
-}
-
-/*Paragraph formatting, font, and color*/
-#p {
-
 }
 
 /* Map */
