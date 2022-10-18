@@ -1254,10 +1254,12 @@ var stationID = {
     ],
 }
 
+function getStation(stationID){
 
+}
 
 function stationData() {
-    fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/" + stationID[0].stationNumber + ".json")
+    fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/" + stationID.alabama[0].stationNumber + ".json")
         .then(function (response) {
             return response.json()
         })

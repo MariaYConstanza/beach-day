@@ -133,7 +133,7 @@ function check(long, lat) {
 // get noaa tide data - from their website -> link to their page via fetch.then
 
 
-stationData();
+// stationData();
 
 generateMap();
 
