@@ -17,6 +17,7 @@
 --Med-Blue: #427aa1;
 --Drk-Blue: #05668d;
 --Wht: #ffff; 
+--Mich: 'Michroma', sans-serif;
 }
 
 /* ****************************** */
@@ -28,9 +29,17 @@ header {
 
 }
 
+.title-page {
+    font-family: var(--Mich);
+    font-size: 50px;
+    text-align: center;
+    padding-top: 50px;
+    color: var(--Lht-Blue);
+}
+
 /* Banner image needs to be turned in a flex -MARIA */
 .banner {
-    height: 150px;
+    height: 185px;
     width: 100%;
     background-image: url(../img/header.png);
 }
@@ -63,14 +72,24 @@ aside {
     background-color: var(--Med-Blue);
 }
 
+.flex a {
+    padding: 8px 30px;
+}
+
 .custom-about, .custom-projects, .custom-donate {
+    font-family: var(--Mich); 
     background-color: var(--Med-Blue);
     color: var(--Lht-Blue);
+    margin-top: 2px;
 }
 
 .custom-about:hover , .custom-projects:hover , .custom-donate:hover {
     background-color: var(--Drk-Green);
     color: var(--Wht);
+}
+
+.custom-display {
+    font-family: var(--Mich);
 }
 
 .inputIcon i {
