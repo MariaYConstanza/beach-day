@@ -1,13 +1,6 @@
 /* Reminder: delete empty rulesets */
 
 /* ****************************** */
-/*       Universal selector       */
-/* ****************************** */
-* {
-
-}
-
-/* ****************************** */
 /*        Color selectors         */
 /* ****************************** */
 :root {
@@ -23,11 +16,6 @@
 /* ****************************** */
 /*       Element selectors        */
 /* ****************************** */
-
-/*Header formatting, font, and color*/
-header {
-
-}
 
 .title-page {
     font-family: var(--Mich);
@@ -66,14 +54,14 @@ background-attachment: scroll;
     padding: 8px 30px;
 }
 
-.custom-about, .custom-projects, .custom-donate {
+.custom-about, .custom-projects, .custom-donate, .custom-wow {
     font-family: var(--Mich); 
     background-color: var(--Med-Blue);
     color: var(--Lht-Blue);
     margin-top: 2px;
 }
 
-.custom-about:hover , .custom-projects:hover , .custom-donate:hover {
+.custom-about:hover , .custom-projects:hover , .custom-donate:hover, .custom-wow:hover {
     background-color: var(--Drk-Green);
     color: var(--Wht);
 }
@@ -127,107 +115,6 @@ background-attachment: scroll;
     color: var(--Lht-Blue);
     background-color: rgba(0,0,0,.5)
 }
-/* Section formatting */
-section {
-
-}
-
-/* Article formatting */
-article { 
-
-}
-
-/*Paragraph formatting, font, and color*/
-p {
-
-}
-
-/* ****************************** */
-/*        Class selectors         */
-/* ****************************** */
-
-/*Header formatting, font, and color*/
-.header {
-
-}
-
-/*Background formatting, font, and color*/
-.body {
-
-}
-
-/* Heading formatting, font, and color */
-.h1 {
-
-}
-
-/* Aside headers formatting, font, and color */
-.aside {
-
-}
-
-/*Nav bar within header formatting, font, and color*/
-.nav {
-
-}
-
-/* Section formatting */
-.section {
-
-}
-
-/* Article formatting */
-.article { 
-
-}
-
-/*Paragraph formatting, font, and color*/
-.p {
-
-}
-
-/* ****************************** */
-/*          ID selectors          */
-/* ****************************** */
-/*Header formatting, font, and color*/
-#header {
-
-}
-
-/*Background formatting, font, and color*/
-#body {
-
-}
-
-/* Heading formatting, font, and color */
-#h1 {
-
-}
-
-/* Aside headers formatting, font, and color */
-#aside {
-
-}
-
-/*Nav bar within header formatting, font, and color*/
-#nav {
-
-}
-
-/* Section formatting */
-#section {
-
-}
-
-/* Article formatting */
-#article { 
-
-}
-
-/*Paragraph formatting, font, and color*/
-#p {
-
-}
 
 /* Map */
 /* must have defined height and width to appear */
@@ -267,25 +154,24 @@ p {
         top: 0;
         z-index: 2;
         width: 100%;
-        height: 40px;
+        height: 60px;
         background-color: var(--Lht-Blue);
     }
-    .custom-about, .custom-projects, .custom-donate {
+    .custom-about, .custom-projects, .custom-donate, .custom-wow {
         font-family: var(--Mich); 
+        text-align: center;
         background-color: var(--Lht-Blue);
         color: var(--Drk-Blue);
         margin-top: 2px;
     }
-    .custom-about:hover , .custom-projects:hover , .custom-donate:hover {
+    .custom-about:hover , .custom-projects:hover , .custom-donate:hover, .custom-wow:hover {
         background-color: var(--Lht-Green);
         color: var(--Wht);
     }
     .custom-display {
         background-color: var(--Med-Blue);
     }
-    {
-        height: 20px;
-    }
+    
     .custom-search:hover {
         background-color: var(--Lht-Blue);
         color: var(--Drk-Blue)
