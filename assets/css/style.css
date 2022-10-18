@@ -126,7 +126,27 @@ background-attachment: fixed;
     color: var(--Lht-Blue);
     background-color: rgba(0,0,0,.5)
 }
-
+.customLinkDiv {
+    text-align: center;
+    justify-content: center;
+    font-family: var(--Mich);
+    color: var(--Lht-Blue);
+    z-index: 5;
+    height: 50px;
+}
+.customBtn {
+    height: 30px;
+    width: 50px;
+    color: black;
+    font-family: var(--Mich);
+    font-weight: bold;
+}
+.customForecast {
+    font-family: var(--Mich);
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(0,0,0,.5)
+}
 /* Map */
 /* must have defined height and width to appear */
 #viewDiv {

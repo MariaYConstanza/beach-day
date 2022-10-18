@@ -1255,6 +1255,9 @@ var stationID = {
 }
 // targets user input 
 var displayBtn = document.getElementById('displayMap');
+var currentWeatherEl = document.getElementById('currentWeather');
+var futureWeatherEl = document.getElementById('futureForecast');
+var noaaLinksEl = document.getElementById('noaaLinks');
 function getStation() {
     var beachInputTarget = document.getElementById('beachInput');
     if (beachInputTarget.value.trim() == "washington") {
@@ -1390,17 +1393,41 @@ function stationData(theStation) {
             // data.stations[0].name //locationName of station
             fetch(data.stations[0].products.self)
                 // 
-                .then(function (response2) {
-                    return response2.json()
+                .then(function (response3) {
+                    return response3.json()
                 })
-                .then(function (data2) {
-                    console.log(data2.products)
-                    for (i = 0; i < data2.products.length; i++) {
-                        // links to NOAA data pages
-
-                        console.log(data2.products[i].name);
-                        console.log(data2.products[i].value);
+                .then(function (data3) {
+                    // removes existing links if any
+                    while (noaaLinksEl.firstChild){
+                        noaaLinksEl.removeChild(noaaLinksEl.firstChild)
                     }
+
+                    var divEl = document.createElement('div');
+                    divEl.setAttribute("id", "currentLinks");
+                    divEl.classList.add('customLinkDiv')
+                    noaaLinksEl.appendChild(divEl);
+                    var btnEl = document.createElement('button')
+                    var liEl = document.createElement('li');
+                    var ulEl = document.createElement('ul');
+                    for (i = 0; i < data3.products.length; i++) {
+                        function renderLinks(){
+
+                        
+                        // links to NOAA data pages
+                        var currentLinksEl = document.getElementById('currentLinks')
+                        //when making liEl, use innerhtml to add <a href="<data2.products[i].value>"data2.products[i].name</a>
+                        btnEl.textContent = data3.products[0].name
+                        btnEl.setAttribute('href', data3.products[0].value)
+                        btnEl.classList.add('customBtn');
+
+                        noaaLinksEl.append(btnEl);
+                        console.log(data3.products[i].name);
+                        console.log(data3.products[i].value);
+                        };
+                        renderLinks();
+                    };
+
+
                 })
 
         })
