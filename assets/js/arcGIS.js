@@ -1,3 +1,4 @@
+
 // This calls the API, just update the url to have your key's name.
 async function fetchKey() {
     const url = 'https://yorkieportunus.herokuapp.com/store/beachDayApp'
@@ -10,6 +11,7 @@ fetchKey().then((key) => {
     secretKey = key.apiKey;
 
 });
+
 
 
 
@@ -145,4 +147,5 @@ function stationData() {
 // get noaa tide data - from their website -> link to their page via fetch.then
 
 stationData();
+
 generateMap();
