@@ -10,7 +10,6 @@ function getWow() {
     .then(function (data) {
       var audio = new Audio(data[0].audio);
       audio.play();
-      console.log(data[0].audio)
     })
     .catch(err => console.error(err))
 }
