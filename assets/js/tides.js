@@ -1,12 +1,31 @@
-// fetch('https://api.marea.ooo/v2/tides?duration=1440&interval=60&latitude=44.414&longitude=-2.097&model=FES2014&datum=MSL', {
-//     headers: {
-//         'Accept': 'application/json',
-//         'x-marea-api-token': '5db9c91e-62b7-42f6-9330-aa7665f510c2'
-//     }
-// });
+// api key 9878347f-b060-480e-b198-7c2bf869297d
+// endpoint http://www.worldtides.info/api/v3?
 
-// tides()
+var generateBtn = document.getElementById("displayTides");
+generateBtn.addEventListener("click", getTides);
 
-// curl -X GET "https://api.marea.ooo/v2/tides?duration=1440&interval=60&latitude=44.414&longitude=-2.097&model=FES2014&datum=MSL" \
-//  -H "Accept: application/json" \
-//  -H "x-marea-api-token: 5db9c91e-62b7-42f6-9330-aa7665f510c2"
+const optionsTides = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+  },
+};
+
+function getTides(event) {
+  event.preventDefault();
+
+  fetch(
+    "http://www.worldtides.info/api/v3?heights&extremes&date={date}&lat={lat}&lon={lon}&days=7&key=9878347f-b060-480e-b198-7c2bf869297d",
+    optionsTides
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      //   var tideContainer = document.getElementById("");
+      //   var tideElement = document.getElementById("");
+      //   console.log(tideElement);
+      console.log(response);
+      //   tideElement.innerHTML =
+      //   tideContainer.appendChild(tideElement);
+    })
+    .catch((err) => console.error(err));
+}
