@@ -81,10 +81,7 @@ function check(longitude, latitude) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data)
 
-
-            console.log(data.properties.forecast);
             fetch(data.properties.forecast)
                 .then(function (response2) {
                     return response2.json();
@@ -100,20 +97,23 @@ function check(longitude, latitude) {
 
 function renderFutureForecast(data2) {
     var futureForecast = document.getElementById('futureForecast');
+    var currentWeatherEl = document.getElementById('currentWeather');
     var currentWeather = data2.properties.periods[0];
     var forecastWeather = [];
     // removes rendered forecast
     while (futureForecast.firstChild) {
         futureForecast.removeChild(futureForecast.firstChild)
-    }
+    };
+    while (currentWeatherEl.firstChild) {
+        currentWeatherEl.removeChild(currentWeatherEl.firstChild)
+    };
 
     forecastWeather.push(data2.properties.periods[2]);
     forecastWeather.push(data2.properties.periods[4]);
     forecastWeather.push(data2.properties.periods[6]);
     forecastWeather.push(data2.properties.periods[8]);
     forecastWeather.push(data2.properties.periods[10]);
-    console.log(forecastWeather);
-    console.log(currentWeather);
+
     
     for (i = 0; i < forecastWeather.length; i++) {
        
@@ -123,6 +123,9 @@ function renderFutureForecast(data2) {
             // containerDiv.classList.add('');
             var ulEl = document.createElement('ul');
             ulEl.classList.add('customForecast');
+            ulEl.classList.add('text-gray-700');
+            ulEl.classList.add('text-base');
+            ulEl.classList.add('mb-4');
             var liEl1 = document.createElement('li'); // icon
             var liEl2 = document.createElement('li'); // name
             var liEl3 = document.createElement('li'); // wind
@@ -144,7 +147,33 @@ function renderFutureForecast(data2) {
         };
 
         showForecast();
+        
     }
+    function showCurrent() {
+
+        var containerDiv = document.createElement('div');
+        // containerDiv.classList.add('');
+        var ulEl = document.createElement('ul');
+        var liEl1 = document.createElement('li'); // icon
+        var liEl2 = document.createElement('li'); // name
+        var liEl3 = document.createElement('li'); // wind
+        var liEl4 = document.createElement('li'); // temp
+        var liEl5 = document.createElement('li'); // short forecast
+        var iconImg = '<img src="' + currentWeather.icon + '"></img>'
+        liEl1.innerHTML = iconImg;
+        liEl2.textContent = currentWeather.name;
+        liEl3.textContent = currentWeather.windDirection + " " + currentWeather.windSpeed;
+        liEl4.textContent = currentWeather.temperature + " " + currentWeather.temperatureUnit;
+        liEl5.textContent = currentWeather.shortForecast;
+        ulEl.append(liEl2);
+        ulEl.append(liEl5);
+        ulEl.append(liEl1);
+        ulEl.append(liEl4);
+        ulEl.append(liEl3);
+        containerDiv.append(ulEl);
+        currentWeatherEl.append(containerDiv);
+    };
+    showCurrent();
 };
 
 
