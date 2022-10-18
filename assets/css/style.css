@@ -37,7 +37,7 @@ header {
 
 /*Background formatting, font, and color*/
 body {
-background-image: url("/assets/img/Owen\ Wilson.jpg");
+background-image: url("../img/Owen\ Wilson.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: scroll;
