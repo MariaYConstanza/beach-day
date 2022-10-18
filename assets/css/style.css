@@ -142,6 +142,7 @@ background-attachment: fixed;
     color: black;
     font-family: var(--Mich);
     font-weight: bold;
+    z-index: 5;
 }
 .customForecast {
     font-family: var(--Mich);

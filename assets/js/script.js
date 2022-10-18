@@ -1378,7 +1378,7 @@ function getStation() {
 }
 
 function stationData(theStation) {
-    console.log(theStation)
+
     fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/" + theStation + ".json")
         .then(function (response) {
             return response.json()
@@ -1398,7 +1398,7 @@ function stationData(theStation) {
                 })
                 .then(function (data3) {
                     // removes existing links if any
-                    while (noaaLinksEl.firstChild){
+                    while (noaaLinksEl.firstChild) {
                         noaaLinksEl.removeChild(noaaLinksEl.firstChild)
                     }
 
@@ -1406,26 +1406,52 @@ function stationData(theStation) {
                     divEl.setAttribute("id", "currentLinks");
                     divEl.classList.add('customLinkDiv')
                     noaaLinksEl.appendChild(divEl);
-                    var btnEl = document.createElement('button')
-                    var liEl = document.createElement('li');
-                    var ulEl = document.createElement('ul');
-                    for (i = 0; i < data3.products.length; i++) {
-                        function renderLinks(){
 
-                        
+
+                    var tempHolder = [];
+                    tempHolder.push(data3.products);
+
+
+                    function renderLinks() {
+                        var btnEl1 = document.createElement('button'); // water levels
+                        var btnEl2 = document.createElement('button'); // tide predictions
+                        var btnEl3 = document.createElement('button'); // meteorological
+                        var btnEl4 = document.createElement('button'); // reports
+                        btnEl1.textContent = data3.products[0].name;
+                        btnEl1.setAttribute('action', data3.products[0].value);
+                        btnEl1.setAttribute('method', 'get');
+                        btnEl1.setAttribute('target', '_blank');
+                        btnEl1.classList.add('customBtn');
+                        btnEl2.textContent = data3.products[1].name;
+                        btnEl2.setAttribute('action', data3.products[1].value);
+                        btnEl2.setAttribute('method', 'get');
+                        btnEl2.setAttribute('target', '_blank');
+                        btnEl2.classList.add('customBtn');
+                        btnEl3.textContent = data3.products[2].name;
+                        btnEl3.setAttribute('action', data3.products[2].value);
+                        btnEl3.setAttribute('method', 'get');
+                        btnEl3.setAttribute('target', '_blank');
+                        btnEl3.classList.add('customBtn');
+                        btnEl4.textContent = data3.products[3].name;
+                        btnEl4.setAttribute('action', data3.products[3].value);
+                        btnEl4.setAttribute('method', 'get');
+                        btnEl4.setAttribute('target', '_blank');
+                        btnEl4.classList.add('customBtn');
                         // links to NOAA data pages
                         var currentLinksEl = document.getElementById('currentLinks')
                         //when making liEl, use innerhtml to add <a href="<data2.products[i].value>"data2.products[i].name</a>
-                        btnEl.textContent = data3.products[0].name
-                        btnEl.setAttribute('href', data3.products[0].value)
-                        btnEl.classList.add('customBtn');
 
-                        noaaLinksEl.append(btnEl);
-                        console.log(data3.products[i].name);
-                        console.log(data3.products[i].value);
-                        };
-                        renderLinks();
+
+                        currentLinksEl.append(btnEl1);
+                        currentLinksEl.append(btnEl2);
+                        currentLinksEl.append(btnEl3);
+                        currentLinksEl.append(btnEl4);
+                        noaaLinksEl.append(currentLinksEl);
+                        // console.log(data3.products[i].name);
+                        // console.log(data3.products[i].value);
                     };
+                    renderLinks();
+
 
 
                 })
