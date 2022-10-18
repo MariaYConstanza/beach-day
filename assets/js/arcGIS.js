@@ -1,5 +1,5 @@
-
 // This calls the API, just update the url to have your key's name.
+
 async function fetchKey() {
     const url = 'https://yorkieportunus.herokuapp.com/store/beachDayApp'
     const response = await fetch(url);
@@ -17,6 +17,11 @@ fetchKey().then((key) => {
 
 // script for map API
 function generateMap() {
+    // if statements for generated longitude and latitude
+    // pass longitude and latitude to map
+    // or set start to -80.1500, 25.7600 ** Miami
+
+
     // arcGIS API call logic
     require([
         "esri/config",
@@ -100,52 +105,8 @@ function check(long, lat) {
 
 // https://api.tidesandcurrents.noaa.gov/api/prod/#requestResponse
 // weather.gov tides specific API
-var stationID = [
-    {
-        name: "Fernandian Beach",
-        lat: "",
-        lon: "",
-        number: "8720030"
-    },
-    {
-        name: "Southbank Riverwalk, St Johns River",
-        lat: "",
-        lon: "",
-        number: "8720226"
-    },
-    {
-        name: "Lake Worth Pier",
-        lat: "",
-        lon: "",
-        number: "8722670"
-    },
-]
-function stationData() {
-    fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8726724.json?expand=details,tidepredoffsets&units=english")
-        .then(function (response) {
-            console.log(response);
-            return response.json()
-        })
-        .then(function (data) {
-            console.log(data)
-            // data.stations[0].lat //lat of station
-            // data.stations[0].lng //lon of station
-            // data.stations[0].name //name of station
-            // data.stations[0].tidePredOffsets.
-            fetch(data.stations[0].supersededdatums.self)
-                .then(function (response2) {
-                    console.log(response2)
-                    return response2.json()
-                })
-                .then(function (data2) {
-                    console.log(data2)
-                })
 
-        })
-}
 
-// get noaa tide data - from their website -> link to their page via fetch.then
 
-stationData();
+// generateMap();
 
-generateMap();

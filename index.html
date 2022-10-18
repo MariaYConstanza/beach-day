@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta locationName="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
@@ -55,13 +55,15 @@
         <!--Flexbox containing search box and map-->
         <div class="flex flex-row mb-20 pb-4">
             <!--Search Box Container-->
+
             <div class="flex flex-col justify-between h-80 ml-3 p-3 rounded-lg w-1/4 mt-2 custom-display">
                 <div id="searchForm" class="inline inputIcon">
                     <button type="submit" value="Submit" class="btn btn-info"><i class="fas fa-search scale-100 hover:scale-50"></i></button>
-                    <input type="text" id=“beachInput” class="form-control border rounded inputField"/>
+                    <input type="text" id="beachInput" class="form-control border rounded inputField"/>
+
                 </div>
                 <p class="text-gray-700 text-base mb-4"></p>
-                <button type="button"
+                <button type="button" id="displayMap"
 
                     class="px-3 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md  hover:shadow-lg focus:bg-white focus:shadow-lg focus:outline-none bg-clip-padding active:shadow-lg custom-search">Display
                     map</button>
