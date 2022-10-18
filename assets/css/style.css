@@ -79,10 +79,12 @@ background-attachment: fixed;
 
 .custom-display {
     background-color: var(--Drk-Blue);
+    background-size: auto;
 }
 
 .custom-search {
     font-family: var(--Mich);
+    background-size: auto;
 }
 
 .custom-search:hover {
