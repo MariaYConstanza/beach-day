@@ -42,7 +42,7 @@ function generateMap(longitude, latitude) {
             container: "viewDiv", //html id location for map
             map: map,
             center: [longitude, latitude], //starting location of map -- longitude, latitude
-            zoom: 13
+            zoom: 10
         });
         // API call for arcGIS location
         const serviceUrl = "http://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer";
@@ -63,26 +63,26 @@ function generateMap(longitude, latitude) {
                 });
             // generates the longitude and latitude then displays it at point of click within API widget
             function showAddress(address, pt) {
-                var long = Math.round(pt.longitude * 10000) / 10000;
-                var lat = Math.round(pt.latitude * 10000) / 10000;
+                var longitude = Math.round(pt.longitude * 10000) / 10000;
+                var latitude = Math.round(pt.latitude * 10000) / 10000;
                 view.popup.open({
                     title: + Math.round(pt.longitude * 100000) / 100000 + ", " + Math.round(pt.latitude * 100000) / 100000,
                     content: address,
                     location: pt
                 });
+                check(longitude, latitude);
 
 
-                check(long, lat);
             }
         });
     });
 };
 
-// calls weather.gov API for lattitude and longitude based weather
-function check(long, lat) {
-    console.log(long);
-    console.log(lat);
-    fetch("https://api.weather.gov/points/" + lat + "," + long)
+// calls weather.gov API for latitude and longitude based weather
+function check(longitude, latitude) {
+    console.log(longitude);
+    console.log(latitude);
+    fetch("https://api.weather.gov/points/" + latitude + "," + longitude)
         .then(function (response) {
             return response.json();
         })
@@ -93,7 +93,8 @@ function check(long, lat) {
                     return resposne2.json();
                 })
                 .then(function (data2) {
-                    console.log(data2)
+                    console.log(data2);
+                    console.log(data2.properties.periods[0]); //current weather
                 })
         }
         )
