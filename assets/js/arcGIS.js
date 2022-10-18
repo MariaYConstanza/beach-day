@@ -1,3 +1,6 @@
+
+
+
 // script for map API
 function generateMap() {
     // arcGIS API call logic
@@ -74,8 +77,6 @@ function generateMap() {
         });
     });
 };
-
-
 
 
 generateMap();
