@@ -60,7 +60,7 @@ A special thanks to my daughter, Yennefer. Every day she proves she is small but
 
 MIT License
 
-Copyright (c) [2022] yourNameHere
+Copyright (c) [2022] yourlocationNameHere
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
