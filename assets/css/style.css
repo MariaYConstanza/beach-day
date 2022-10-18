@@ -155,6 +155,7 @@ background-attachment: fixed;
 .customForecast {
     display: flex;
     flex-direction: column;
+    
     justify-content: space-evenly;
     margin: 0 5px 0 5px;
     padding: 2px;
@@ -165,6 +166,14 @@ background-attachment: fixed;
     background-color: rgba(0,0,0,.5);
     border-radius: 3%;
 }
+.generatedLinks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Map */
 /* must have defined height and width to appear */
 #viewDiv {
