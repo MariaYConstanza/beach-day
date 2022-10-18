@@ -1253,11 +1253,21 @@ var stationID = {
         }
     ],
 }
-
-
+// targets user input 
+var beachInputTarget = document.getElementById('beachInput');
+console.log(beachInputTarget)
+var displayBtn = document.getElementById('displayMap');
+function getStation(){
+    console.log(beachInputTarget.value.trim())
+    if (beachInputTarget.value.trim() === ""){
+        console.log("no input detected")
+    } else{
+        console.log("not working")
+    }
+}
 
 function stationData() {
-    fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/" + stationID[0].stationNumber + ".json")
+    fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/" + stationID.alabama[0].stationNumber + ".json")
         .then(function (response) {
             return response.json()
         })
@@ -1279,3 +1289,8 @@ function stationData() {
 }
 
 stationData();
+
+displayBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    getStation();
+})

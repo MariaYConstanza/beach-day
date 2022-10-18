@@ -106,34 +106,7 @@ function check(long, lat) {
 // https://api.tidesandcurrents.noaa.gov/api/prod/#requestResponse
 // weather.gov tides specific API
 
-// function stationData(stationID) {
-//     fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/" + stationID[0].stationNumber + ".json?expand=details,tidepredoffsets&units=english")
-//         .then(function (response) {
-//             console.log(response);
-//             return response.json()
-//         })
-//         .then(function (data) {
-//             console.log(data)
-//             // data.stations[0].lat //lat of station
-//             // data.stations[0].lng //lon of station
-//             // data.stations[0].locationName //locationName of station
-//             // data.stations[0].tidePredOffsets.
-//             fetch(data.stations[0].supersededdatums.self)
-//                 .then(function (response2) {
-//                     console.log(response2)
-//                     return response2.json()
-//                 })
-//                 .then(function (data2) {
-//                     console.log(data2)
-//                 })
 
-//         })
-// }
-
-// get noaa tide data - from their website -> link to their page via fetch.then
-
-
-stationData();
 
 generateMap();
 
