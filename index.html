@@ -6,11 +6,12 @@
     <meta locationName="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Original -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -35,9 +36,8 @@
                             <div class="flex">
 
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        
-                                <a href="#aboutUs"
-                                    class="px-5 py-2 rounded-md text-sm font-medium  custom-about">About
+
+                                <a href="#aboutUs" class="px-5 py-2 rounded-md text-sm font-medium  custom-about">About
                                     us</a>
 
                                 <a href="#"
@@ -58,84 +58,74 @@
 
             <div class="flex flex-col justify-between h-80 ml-3 p-3 rounded-lg bg-gray-600 w-1/4 mt-2">
                 <div id="searchForm" class="inline inputIcon">
-                    <button type="submit" value="Submit" class="btn btn-info"><i class="fas fa-search scale-100 hover:scale-50"></i></button>
-                    <input type="text" id="beachInput" class="form-control border rounded inputField"/>
+                    <button type="submit" value="Submit" class="btn btn-info"><i
+                            class="fas fa-search scale-100 hover:scale-50"></i></button>
+                    <input type="text" id="beachInput" class="form-control border rounded inputField"
+                        placeholder="state of beach" />
 
                 </div>
                 <p class="text-gray-700 text-base mb-4"></p>
                 <button type="button" id="displayMap"
-
                     class="px-3 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-white focus:shadow-lg focus:outline-none bg-clip-padding active:shadow-lg custom-display">Display
 
                     map</button>
 
-                </div>
-
-            </div>
-            <div id="wow">
-                <input type="button" id="wowButton" class="px-3 py2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue700 hover:shadow-lg focus:bg-white focus:shadow-lg focus:outline-none bg-clip-padding active:shadow-lg">Wow</button>
             </div>
 
-            <!-- this displays the map -Taber -->
-            <div id="viewDiv"></div>
+        </div>
+        <div id="wow">
+            <input type="button" id="wowButton"
+                class="px-3 py2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue700 hover:shadow-lg focus:bg-white focus:shadow-lg focus:outline-none bg-clip-padding active:shadow-lg">Wow</button>
+        </div>
+
+        <!-- this displays the map -->
+        <div id="viewDiv"></div>
         </div>
 
         <div id="aboutUs" class="flex flex-nowrap content-evenly mb-20">
             <h1 class="text-white pl-6 pr-10 heading">About Us</h1>
-            <p class="text-white pl-3 pr-3">As a group of aspiring software developers based out of Florida, we created this application to provide our users with the most up-to-date weather conditions to help our fellow surfers catch the biggest wave. Track tide activity, water levels and more to grab your board and plan your next "sick" day. If you would like to view more of our collaborators' work, please check out our GitHub profiles to view our past and/or ongoing projects below! </p>
+            <p class="text-white pl-3 pr-3">As a group of aspiring software developers based out of Florida, we created
+                this application to provide our users with the most up-to-date weather conditions to help our fellow
+                surfers catch the biggest wave. Track tide activity, water levels and more to grab your board and plan
+                your next "sick" day. If you would like to view more of our collaborators' work, please check out our
+                GitHub profiles to view our past and/or ongoing projects below! </p>
         </div>
 
         <div class="flex flex-row-reverse content-evenly mb-20">
             <h1 class="text-white pl-6 pr-10 heading">Projects</h1>
             <div id="carouselExampleControls" class="carousel slide relative pl-3 pr-3" data-bs-ride="carousel">
                 <div class="carousel-inner relative w-full overflow-hidden">
-                  <div class="carousel-item active relative float-left w-full">
-                    <img
-                      src="./assets/img/carousel pic 1.jpg"
-                      class="block w-full"
-                      alt="Stacked Boards"/>
-                  </div>
-                  <div class="carousel-item relative float-left w-full">
-                    <img
-                      src="./assets/img/carouself pic 2.jpg"
-                      class="block w-full"
-                      alt="Van on Beach"/>
-                  </div>
-                  <div class="carousel-item relative float-left w-full">
-                    <img
-                      src="./assets/img/carousel pic 3.jpg"
-                      class="block w-full"
-                      alt="Lined Up Boards"/>
-                  </div>
-                  <div class="carousel-item relative float-left w-full">
-                    <img
-                      src="./assets/img/carousel pic 4.jpg"
-                      class="block w-full"
-                      alt="Board in Sand"/>
-                  </div>
+                    <div class="carousel-item active relative float-left w-full">
+                        <img src="./assets/img/carousel pic 1.jpg" class="block w-full" alt="Stacked Boards" />
+                    </div>
+                    <div class="carousel-item relative float-left w-full">
+                        <img src="./assets/img/carouself pic 2.jpg" class="block w-full" alt="Van on Beach" />
+                    </div>
+                    <div class="carousel-item relative float-left w-full">
+                        <img src="./assets/img/carousel pic 3.jpg" class="block w-full" alt="Lined Up Boards" />
+                    </div>
+                    <div class="carousel-item relative float-left w-full">
+                        <img src="./assets/img/carousel pic 4.jpg" class="block w-full" alt="Board in Sand" />
+                    </div>
                 </div>
                 <button
-                  class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                    type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
                 <button
-                  class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                  type="button"
-                  data-bs-target="#carouselExampleControls"
-                  data-bs-slide="next">
-                  <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                    type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
         </div>
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-    <script src="./assets/js/wow.js"></script>
-    <script src="./assets/js/tides.js"></script>
-    <script src="./assets/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+        <script src="./assets/js/wow.js"></script>
+        <script src="./assets/js/tides.js"></script>
+        <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

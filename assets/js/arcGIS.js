@@ -16,7 +16,7 @@ fetchKey().then((key) => {
 
 
 // script for map API
-function generateMap() {
+function generateMap(longitude, latitude) {
     // if statements for generated longitude and latitude
     // pass longitude and latitude to map
     // or set start to -80.1500, 25.7600 ** Miami
@@ -41,7 +41,7 @@ function generateMap() {
         const view = new MapView({
             container: "viewDiv", //html id location for map
             map: map,
-            center: [-80.1500, 25.7600], //starting location of map -- longitude, latitude
+            center: [longitude, latitude], //starting location of map -- longitude, latitude
             zoom: 13
         });
         // API call for arcGIS location
