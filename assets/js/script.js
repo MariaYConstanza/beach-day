@@ -1257,7 +1257,6 @@ var stationID = {
 var displayBtn = document.getElementById('displayMap');
 function getStation() {
     var beachInputTarget = document.getElementById('beachInput');
-    // base start point with no input || not listed
     if (beachInputTarget.value.trim() == "washington") {
         var theStation = stationID.washington[Math.floor(Math.random() * stationID.washington.length)].stationNumber;
         stationData(theStation);
@@ -1370,14 +1369,8 @@ function getStation() {
         var theStation = stationID.alabama[Math.floor(Math.random() * stationID.alabama.length)].stationNumber;
         stationData(theStation);
     } else {
-        var longitude = "-80.1500";
-        var latitude = "25.7600";
         var theStation = stationID.florida[8].stationNumber
-        generateMap(longitude, latitude);
         stationData(theStation);
-        // else if statements for each location
-
-        console.log("try again")
     }
 }
 
@@ -1401,17 +1394,12 @@ function stationData(theStation) {
                     return response2.json()
                 })
                 .then(function (data2) {
-                    var beachInputTarget = document.getElementById('beachInput').value;
-                    if (beachInputTarget === "") {
+                    console.log(data2.products)
+                    for (i = 0; i < data2.products.length; i++) {
+                        // links to NOAA data pages
 
-                    } else {
-                        console.log(data2.products)
-                        for (i = 0; i < data2.products.length; i++){
-
-                        
-                            console.log(data2.products[i].name);
-                            console.log(data2.products[i].value);
-                        }
+                        console.log(data2.products[i].name);
+                        console.log(data2.products[i].value);
                     }
                 })
 
