@@ -1255,6 +1255,7 @@ var stationID = {
 }
 // targets user input 
 var displayBtn = document.getElementById('displayMap');
+var currentWeatherEl = document.getElementById('currentWeather');
 function getStation() {
     var beachInputTarget = document.getElementById('beachInput');
     if (beachInputTarget.value.trim() == "washington") {
