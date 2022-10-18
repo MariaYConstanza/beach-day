@@ -69,7 +69,7 @@
                         placeholder="state of beach" />
 
                 </div>
-                <p class="text-gray-700 text-base mb-4"></p>
+                <p class="text-gray-700 text-base mb-4" id="currentWeather"></p>
 
                 <button type="button" id="displayMap"
                     class="px-3 py-2.5 bg-white text-black font-medium md:text-base text-[11px] leading-tight uppercase rounded shadow-md  hover:shadow-lg focus:bg-white focus:shadow-lg focus:outline-none bg-clip-padding active:shadow-lg custom-search">Display
@@ -81,7 +81,13 @@
         </div>
 
         <!-- this displays the map -->
-        <div id="viewDiv"></div>
+
+        <div class="flex flex-row">
+
+            <div id="viewDiv"></div>
+            <div id="noaaLinks"></div>
+        </div>
+
 
 
         <div id="aboutUs" class="flex flex-nowrap content-evenly mt-20 mb-20">
