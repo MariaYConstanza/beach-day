@@ -176,6 +176,12 @@ background-attachment: fixed;
 
 /* Mobile devices */
 @media screen and (max-width: 500px) {
+    #projects, #aboutUs  {
+        display: flex;
+        flex-direction: column;
+        text-align: center; 
+    }
+
     .wow-logo {
         visibility: hidden;
     }
