@@ -108,5 +108,5 @@ function check(long, lat) {
 
 
 
-generateMap();
+// generateMap();
 

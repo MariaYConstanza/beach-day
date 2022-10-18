@@ -1254,15 +1254,17 @@ var stationID = {
     ],
 }
 // targets user input 
-var beachInputTarget = document.getElementById('beachInput');
-console.log(beachInputTarget)
 var displayBtn = document.getElementById('displayMap');
 function getStation(){
-    console.log(beachInputTarget.value.trim())
+    var beachInputTarget = document.getElementById('beachInput');
+    
     if (beachInputTarget.value.trim() === ""){
-        console.log("no input detected")
-    } else{
-        console.log("not working")
+        generateMap();
+    } else if (beachInputTarget.value.trim() == "washington") {
+        var theStation = stationID.washington[0].stationNumber;
+        generateMap();
+    } else {
+        console.log("try again")
     }
 }
 
