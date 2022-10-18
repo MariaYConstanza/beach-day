@@ -1257,40 +1257,59 @@ var stationID = {
 var displayBtn = document.getElementById('displayMap');
 function getStation(){
     var beachInputTarget = document.getElementById('beachInput');
-    
+    // base start point with no input || not listed
     if (beachInputTarget.value.trim() === ""){
-        generateMap();
+        var longitude = "-80.1500";
+        var latitude = "25.7600";
+        var theStation = stationID.florida[8].stationNumber
+        generateMap(longitude, latitude);
+        stationData(theStation);
+        // else if statements for each location
     } else if (beachInputTarget.value.trim() == "washington") {
         var theStation = stationID.washington[0].stationNumber;
-        generateMap();
+       stationData(theStation);
     } else {
         console.log("try again")
     }
 }
 
-function stationData() {
-    fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/" + stationID.alabama[0].stationNumber + ".json")
+function stationData(theStation) {
+    console.log(theStation)
+    fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/" + theStation + ".json")
         .then(function (response) {
             return response.json()
         })
         .then(function (data) {
+            var latitude = data.stations[0].lat;
+            var longitude = data.stations[0].lng;
+            generateMap(longitude, latitude);
             // data.stations[0].lat //lat of station
             // data.stations[0].lng //lon of station
             // data.stations[0].name //locationName of station
             fetch(data.stations[0].products.self)
                 // 
                 .then(function (response2) {
-                    console.log(response2)
                     return response2.json()
                 })
                 .then(function (data2) {
-                    console.log(data2.products[7].value)
+                    console.log(data2.products)
+                    console.log(data2.products[0].value) // water levels
+                    console.log(data2.products[1].value) // reports
+                    console.log(data2.products[2].value) // tide predictions
+                    console.log(data2.products[3].value) // meteorological
+                    console.log(data2.products[4].value) // ports
+                    console.log(data2.products[5].value) // benchmark
+                    console.log(data2.products[6].value) // datums
+                    console.log(data2.products[7].value) // harcon
+                    console.log(data2.products[8].value) // sltrends
+                    console.log(data2.products[9].value) // port code
+                    console.log(data2.products[10].value) // port name
                 })
 
         })
 }
 
-stationData();
+
 
 displayBtn.addEventListener("click", function(event){
     event.preventDefault();
