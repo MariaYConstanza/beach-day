@@ -123,7 +123,7 @@ function renderFutureForecast(data2) {
             // containerDiv.classList.add('');
             var ulEl = document.createElement('ul');
             ulEl.classList.add('customForecast');
-            ulEl.classList.add('text-gray-700');
+            
             ulEl.classList.add('text-base');
             ulEl.classList.add('mb-4');
             var liEl1 = document.createElement('li'); // icon
