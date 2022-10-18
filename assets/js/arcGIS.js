@@ -12,9 +12,6 @@ fetchKey().then((key) => {
 
 });
 
-
-
-
 // script for map API
 function generateMap(longitude, latitude) {
     // if statements for generated longitude and latitude
@@ -55,7 +52,6 @@ function generateMap(longitude, latitude) {
             // takes click location and generates closest address to clicked location
             locator.locationToAddress(serviceUrl, params)
                 .then(function (response) { // Show the address found
-                    console.log(response.address)
                     const address = response.address;
                     showAddress(address, evt.mapPoint);
                 }, function (err) { // Show no address found
@@ -80,34 +76,23 @@ function generateMap(longitude, latitude) {
 
 // calls weather.gov API for latitude and longitude based weather
 function check(longitude, latitude) {
-    console.log(longitude);
-    console.log(latitude);
     fetch("https://api.weather.gov/points/" + latitude + "," + longitude)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data.properties.forecast);
-            fetch(data.properties.forecast)
-                .then(function (resposne2) {
-                    return resposne2.json();
-                })
-                .then(function (data2) {
-                    console.log(data2);
-                    console.log(data2.properties.periods[0]); //current weather
-                })
+            if (data.length > 0) {
+                console.log(data.properties.forecast);
+                fetch(data.properties.forecast)
+                    .then(function (resposne2) {
+                        return resposne2.json();
+                    })
+                    .then(function (data2) {
+                        console.log(data2);
+                        console.log(data2.properties.periods[0]); //current weather
+                    })
+            }
         }
         )
+    getWow();
 };
-// event for click to take input and set map to that location
-// pass input to set the center in function, start map on "display map" click
-// if no input, generate map to start at Miami
-// need to add features to map to include wind, tide, weather ect.
-
-// https://api.tidesandcurrents.noaa.gov/api/prod/#requestResponse
-// weather.gov tides specific API
-
-
-
-// generateMap();
-
