@@ -32,6 +32,13 @@
     background-image: url(../img/header.png);
 }
 
+.wow-logo {
+    position: absolute;
+    top: 43px;
+    left: 1.2cm;
+    border-radius: 90px 90px 90px 90px;
+}
+
 /*Background formatting, font, and color*/
 body {
 background-image: url("../img/Owen\ Wilson.jpg");
@@ -51,6 +58,10 @@ background-attachment: fixed;
 }
 
 .flex a {
+    padding: 8px 30px;
+}
+
+.custom-wow {
     padding: 8px 30px;
 }
 
@@ -142,11 +153,14 @@ background-attachment: fixed;
 
 /* Mobile devices */
 @media screen and (max-width: 500px) {
+    .wow-logo {
+        visibility: hidden;
+    }
     .title-page {
         font-family: var(--Mich);
         font-size: 50px;
         text-align: center;
-        padding-top: 50px;
+        padding-top: 45px;
         color: var(--Drk-Blue);
     }
     .custom-nav {
