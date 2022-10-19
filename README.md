@@ -38,6 +38,9 @@ A special thanks to my daughter, Yennefer. Every day she proves she is small but
 * Reset: [Eric Meyer reset](https://meyerweb.com/eric/tools/css/reset/)
 * Tailwind CSS: [Tailwind](https://tailwindcss.com/)
 * HTML: [W3 Schools](https://www.w3schools.com/html/)
+* arcGIS: [Esri - arcGIS](https://developers.arcgis.com/)
+* NOAA: [NOAA - Tides and Currents](https://tidesandcurrents.noaa.gov/)
+* Owen Wilson: [Owen Wilson API](https://owen-wilson-wow-api.onrender.com/)
 
 ## Links
 <!-- Add links using the following format: -->
