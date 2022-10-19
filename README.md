@@ -25,6 +25,8 @@ Once deployed, the application can be viewed in a traditional desktop web browse
 
 Collaborators on this project included instructional staff, TAs, and students from University of Central Florida.
 
+Jessica Almand, Maria Constanza, Mary Elenus, and Taber Youmans
+
 A special thanks to my daughter, Yennefer. Every day she proves she is small but mighty!
 
 ## References and tutorials utilized
@@ -42,13 +44,13 @@ A special thanks to my daughter, Yennefer. Every day she proves she is small but
 ## Links
 <!-- Add links using the following format: -->
 <!-- * Link subject: [Link title](https://www.link.com/) -->
-* Deployed site: [Live site-404pandas](linkToLiveSiteHere)
+* Deployed site: [Live site-404pandas](https://MariaYConstanza.github.io/beach-day/)
 * Github repo: [Github-MariaYConstanza](https://github.com/MariaYConstanza/beach-day)
 
 ## Screenshots
 <!-- Add screenshots using the following format: -->
 <!-- ![Screenshot alt description](directPathOfScreenshots) -->
-![Screenshot of live image](directPathHere)
+![Screenshot of live image](./assets/img/surfer_screenshot.png)
 
 ![GIF of functionality](directPathHere)
 
