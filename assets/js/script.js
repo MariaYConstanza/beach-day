@@ -1462,6 +1462,10 @@ function stationData(theStation) {
         })
 }
 
+function savedSearch(){
+    
+}
+
 var submitBtn = document.querySelector('.btn-info')
 submitBtn.addEventListener('click', function (event) {
     event.preventDefault();
