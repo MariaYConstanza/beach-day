@@ -49,13 +49,3 @@ function getTides(event) {
     })
     .catch(console.error);
 }
-
-// Function to render data into HTML
-function displayTideForecast(response) {
-  const tides = [0];
-  const displayTideForecast = document.getElementById("futureTides");
-  const tides1 = test;
-  const heading = document.createElement("h1");
-  heading.innerHTML = heading;
-  displayTideForecast.appendChild(heading);
-}
