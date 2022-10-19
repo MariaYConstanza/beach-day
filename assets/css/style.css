@@ -1,11 +1,8 @@
-* {
-  text-shadow: 0px 0px 15px black;
-}
+/* Reminder: delete empty rulesets */
 
 /* ****************************** */
 /*        Color selectors         */
 /* ****************************** */
-
 :root {
   --Drk-Green: #679436;
   --Lht-Green: #45be00;
@@ -16,10 +13,40 @@
   --Mich: "Michroma", sans-serif;
 }
 
+/* * {
+  text-shadow: 0px 0px 15px black;
+} */
+
 /* ****************************** */
 /*       Element selectors        */
 /* ****************************** */
 
+.title-page {
+  font-family: var(--Mich);
+  font-size: 50px;
+  text-align: center;
+  padding-top: 50px;
+  color: var(--Lht-Blue);
+}
+
+/* Banner image needs to be turned in a flex -MARIA */
+.banner {
+
+    height: 185px;
+    width: 100%;
+    background-image: url(../img/header.png);
+    border-bottom: 2px solid var(--Drk-Blue);
+
+}
+
+.wow-logo {
+  position: absolute;
+  top: 43px;
+  left: 1.2cm;
+  border-radius: 90px 90px 90px 90px;
+}
+
+/*Background formatting, font, and color*/
 body {
   background-image: url("../img/Owen\ Wilson.jpg");
   background-size: cover;
@@ -27,25 +54,20 @@ body {
   background-attachment: fixed;
 }
 
-/* ****************************** */
-/*        Class selectors         */
-/* ****************************** */
+/*Nav bar within header formatting, font, and color*/
+.custom-nav {
 
-/* Banner image needs to be turned in a flex -MARIA */
-.banner {
-  height: 185px;
-  width: 100%;
-  background-image: url(../img/header.png);
-  border-bottom: 2px solid var(--Drk-Blue);
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 40px;
+    background-color: var(--Med-Blue);
+
 }
 
-.custom-nav {
-  position: fixed;
-  top: 0;
-  z-index: 5;
-  width: 100%;
-  height: 40px;
-  background-color: var(--Med-Blue);
+.flex a {
+  padding: 8px 30px;
 }
 
 .custom-wow {
@@ -65,8 +87,7 @@ body {
 .custom-about:hover,
 .custom-projects:hover,
 .custom-donate:hover,
-.custom-wow:hover,
-.custom-search:hover {
+.custom-wow:hover {
   background-color: var(--Drk-Green);
   color: var(--Wht);
 }
@@ -81,67 +102,9 @@ body {
   background-size: auto;
 }
 
-.custom-p {
-  font-family: var(--Mich);
-  font-weight: bold;
-  color: var(--Lht-Blue);
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.customLinkDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--Mich);
-  color: var(--Lht-Blue);
-  z-index: 2;
-  height: 200px;
-}
-
-.customBtn {
-  margin: 5px;
-  padding: 5px;
-  height: 50px;
-  width: fit-content;
-  color: var(--Lht-Blue);
-  background-color: rgba(0, 0, 0, 0.5);
-  font-family: var(--Mich);
-  font-weight: bold;
-  z-index: 2;
-}
-
-.customForecast {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 0 5px 0 5px;
-  padding: 2px;
-  font-family: var(--Mich);
-  color: var(--Lht-Blue);
-  width: auto;
-  height: fit-content;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 3%;
-}
-
-.flex a {
-  padding: 8px 30px;
-}
-
-.heading {
-  font-size: 50px;
-  font-family: var(--Mich);
-  color: var(--Lht-Blue);
-}
-.generatedLinks {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.custom-search:hover {
+  background-color: var(--Drk-Green);
+  color: var(--Wht);
 }
 
 .inputIcon i {
@@ -149,7 +112,6 @@ body {
   margin-top: 18px;
   padding-left: 8px;
 }
-
 .inputIcon {
   width: 100%;
   margin-bottom: 10px;
@@ -167,24 +129,64 @@ body {
   margin-bottom: 0px;
 }
 
-.title-page {
-  font-family: var(--Mich);
+/* Heading formatting, font, and color */
+.heading {
   font-size: 50px;
-  text-align: center;
-  padding-top: 50px;
+  font-family: var(--Mich);
   color: var(--Lht-Blue);
 }
 
-.wow-logo {
-  position: absolute;
-  top: 43px;
-  left: 1.2cm;
-  border-radius: 90px 90px 90px 90px;
+.custom-p {
+  font-family: var(--Mich);
+  font-weight: bold;
+  color: var(--Lht-Blue);
+  background-color: rgba(0, 0, 0, 0.5);
 }
+.customLinkDiv {
 
-/* ****************************** */
-/*          ID selectors          */
-/* ****************************** */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--Mich);
+    color: var(--Lht-Blue);
+    z-index: 2;
+    height: 200px;
+}
+.customBtn {
+    margin:5px;
+    padding: 5px;
+    height: 50px;
+    width: fit-content;
+    color: var(--Lht-Blue);
+    background-color: rgba(0,0,0,.5);
+    font-family: var(--Mich);
+    font-weight: bold;
+    z-index: 2;
+}
+.customForecast {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-evenly;
+    margin: 0 5px 0 5px;
+    padding: 2px;
+    font-family: var(--Mich);
+    color: var(--Lht-Blue);
+    width: auto;
+    height: fit-content;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 3%;
+}
+.generatedLinks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Map */
 /* must have defined height and width to appear */
@@ -220,7 +222,6 @@ body {
   .wow-logo {
     visibility: hidden;
   }
-
   .title-page {
     font-family: var(--Mich);
     font-size: 50px;
@@ -228,7 +229,6 @@ body {
     padding-top: 45px;
     color: var(--Drk-Blue);
   }
-
   .custom-nav {
     position: fixed;
     top: 0;
@@ -237,7 +237,6 @@ body {
     height: 60px;
     background-color: var(--Lht-Blue);
   }
-
   .custom-about,
   .custom-projects,
   .custom-donate,
@@ -248,7 +247,6 @@ body {
     color: var(--Drk-Blue);
     margin-top: 2px;
   }
-
   .custom-about:hover,
   .custom-projects:hover,
   .custom-donate:hover,
@@ -256,7 +254,6 @@ body {
     background-color: var(--Lht-Green);
     color: var(--Wht);
   }
-
   .custom-display {
     background-color: var(--Med-Blue);
   }
@@ -265,13 +262,11 @@ body {
     background-color: var(--Lht-Blue);
     color: var(--Drk-Blue);
   }
-
   .heading {
     font-size: 50px;
     font-family: var(--Mich);
     color: var(--Lht-Green);
   }
-
   .custom-p {
     font-family: var(--Mich);
     font-weight: bold;
