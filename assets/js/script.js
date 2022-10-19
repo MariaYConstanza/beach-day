@@ -1258,117 +1258,119 @@ var displayBtn = document.getElementById('displayMap');
 var currentWeatherEl = document.getElementById('currentWeather');
 var futureWeatherEl = document.getElementById('futureForecast');
 var noaaLinksEl = document.getElementById('noaaLinks');
+var tempCitySearch = [];
 function getStation() {
-    var beachInputTarget = document.getElementById('beachInput');
-    if (beachInputTarget.value.trim() == "washington") {
+    var beachInput = document.getElementById('beachInput').value.trim();
+    let beachInputTarget = beachInput.toLowerCase();
+    if (beachInputTarget == "washington") {
         var theStation = stationID.washington[Math.floor(Math.random() * stationID.washington.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "virginia") {
+    } else if (beachInputTarget == "virginia") {
         var theStation = stationID.virginia[Math.floor(Math.random() * stationID.virginia.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "texas") {
+    } else if (beachInputTarget == "texas") {
         var theStation = stationID.texas[Math.floor(Math.random() * stationID.texas.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "south carolina") {
+    } else if (beachInputTarget == "south carolina") {
         var theStation = stationID.southCarolina[Math.floor(Math.random() * stationID.southCarolina.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "rhode island") {
+    } else if (beachInputTarget == "rhode island") {
         var theStation = stationID.rhodeIsland[Math.floor(Math.random() * stationID.rhodeIsland.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "pennsylvania") {
+    } else if (beachInputTarget == "pennsylvania") {
         var theStation = stationID.pennsylvania[Math.floor(Math.random() * stationID.pennsylvania.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "pacific islands") {
+    } else if (beachInputTarget == "pacific islands") {
         var theStation = stationID.pacificIslands[Math.floor(Math.random() * stationID.pacificIslands.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "oregon") {
+    } else if (beachInputTarget == "oregon") {
         var theStation = stationID.oregon[Math.floor(Math.random() * stationID.oregon.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "north carolina") {
+    } else if (beachInputTarget == "north carolina") {
         var theStation = stationID.northCarolina[Math.floor(Math.random() * stationID.northCarolina.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "new york") {
+    } else if (beachInputTarget == "new york") {
         var theStation = stationID.newYork[Math.floor(Math.random() * stationID.newYork.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "new jersey") {
+    } else if (beachInputTarget == "new jersey") {
         var theStation = stationID.newJersey[Math.floor(Math.random() * stationID.newJersey.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "mississippi") {
+    } else if (beachInputTarget == "mississippi") {
         var theStation = stationID.mississippi[Math.floor(Math.random() * stationID.mississippi.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "massachusetts") {
+    } else if (beachInputTarget == "massachusetts") {
         var theStation = stationID.massachusetts[Math.floor(Math.random() * stationID.massachusetts.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "maryland") {
+    } else if (beachInputTarget == "maryland") {
         var theStation = stationID.maryland[Math.floor(Math.random() * stationID.maryland.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "maine") {
+    } else if (beachInputTarget == "maine") {
         var theStation = stationID.maine[Math.floor(Math.random() * stationID.maine.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "louisiana") {
+    } else if (beachInputTarget == "louisiana") {
         var theStation = stationID.louisiana[Math.floor(Math.random() * stationID.louisiana.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "hawaii") {
+    } else if (beachInputTarget == "hawaii") {
         var theStation = stationID.hawaii[Math.floor(Math.random() * stationID.hawaii.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "st marys river") {
+    } else if (beachInputTarget == "st marys river") {
         var theStation = stationID.stMarysRiver[Math.floor(Math.random() * stationID.stMarysRiver.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "st clair river") {
+    } else if (beachInputTarget == "st clair river") {
         var theStation = stationID.stClairRiver[Math.floor(Math.random() * stationID.stClairRiver.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "niagara river") {
+    } else if (beachInputTarget == "niagara river") {
         var theStation = stationID.niagaraRiver[Math.floor(Math.random() * stationID.niagaraRiver.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "lake superior") {
+    } else if (beachInputTarget == "lake superior") {
         var theStation = stationID.lakeSuperior[Math.floor(Math.random() * stationID.lakeSuperior.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "lake st clair") {
+    } else if (beachInputTarget == "lake st clair") {
         var theStation = stationID.lakeStClair[Math.floor(Math.random() * stationID.lakeStClair.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "lake ontario") {
+    } else if (beachInputTarget == "lake ontario") {
         var theStation = stationID.lakeOntario[Math.floor(Math.random() * stationID.lakeOntario.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "lake michigan") {
+    } else if (beachInputTarget == "lake michigan") {
         var theStation = stationID.lakeMichigan[Math.floor(Math.random() * stationID.lakeMichigan.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "lake huron") {
+    } else if (beachInputTarget == "lake huron") {
         var theStation = stationID.lakeHuron[Math.floor(Math.random() * stationID.lakeHuron.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "lake erie") {
+    } else if (beachInputTarget == "lake erie") {
         var theStation = stationID.lakeErie[Math.floor(Math.random() * stationID.lakeErie.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "detriot river") {
+    } else if (beachInputTarget == "detriot river") {
         var theStation = stationID.detroitRiver[Math.floor(Math.random() * stationID.detroitRiver.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "georgia") {
+    } else if (beachInputTarget == "georgia") {
         var theStation = stationID.georgia[Math.floor(Math.random() * stationID.georgia.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "florida") {
+    } else if (beachInputTarget == "florida") {
         var theStation = stationID.florida[Math.floor(Math.random() * stationID.florida.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "washington dc") {
+    } else if (beachInputTarget == "washington dc") {
         var theStation = stationID.dc[Math.floor(Math.random() * stationID.dc.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "delaware") {
+    } else if (beachInputTarget == "delaware") {
         var theStation = stationID.delaware[Math.floor(Math.random() * stationID.delaware.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "connecticut") {
+    } else if (beachInputTarget == "connecticut") {
         var theStation = stationID.connecticut[Math.floor(Math.random() * stationID.connecticut.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "caribbean") {
+    } else if (beachInputTarget == "caribbean") {
         var theStation = stationID.caribbean[Math.floor(Math.random() * stationID.caribbean.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "california") {
+    } else if (beachInputTarget == "california") {
         var theStation = stationID.california[Math.floor(Math.random() * stationID.california.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "bermuda") {
+    } else if (beachInputTarget == "bermuda") {
         var theStation = stationID.bermuda[Math.floor(Math.random() * stationID.bermuda.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "alaska") {
+    } else if (beachInputTarget == "alaska") {
         var theStation = stationID.alaska[Math.floor(Math.random() * stationID.alaska.length)].stationNumber;
         stationData(theStation);
-    } else if (beachInputTarget.value.trim() == "alabama") {
+    } else if (beachInputTarget == "alabama") {
         var theStation = stationID.alabama[Math.floor(Math.random() * stationID.alabama.length)].stationNumber;
         stationData(theStation);
     } else {
@@ -1462,16 +1464,25 @@ function stationData(theStation) {
         })
 }
 
-function savedSearch(){
-    
+function savedSearch() {
+    var tempCitySearch = document.getElementById("beachInput").value.trim();
+    var searched = JSON.parse(localStorage.getItem('searched')) || [];
+    if (searched.includes(tempCitySearch)) {
+        // prevents duplicates
+    } else {
+        searched.push(tempCitySearch);
+    }
+    localStorage.setItem('searched', JSON.stringify(searched));
 }
 
 var submitBtn = document.querySelector('.btn-info')
 submitBtn.addEventListener('click', function (event) {
     event.preventDefault();
+    savedSearch();
     getStation();
 })
 displayBtn.addEventListener("click", function (event) {
     event.preventDefault();
+    savedSearch();
     getStation();
 })
