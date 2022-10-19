@@ -51,12 +51,6 @@ A special thanks to my daughter, Yennefer. Every day she proves she is small but
 <!-- ![Screenshot alt description](directPathOfScreenshots) -->
 ![Screenshot of live image](./assets/img/surfer_screenshot.png)
 
-![GIF of functionality](directPathHere)
-
-![GIF of functionality](directPathHere)
-
-![GIF of functionality](directPathHere)
-
 ## License
 
 MIT License
