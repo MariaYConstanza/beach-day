@@ -1417,31 +1417,34 @@ function stationData(theStation) {
                         var btnEl2 = document.createElement('button'); // tide predictions
                         var btnEl3 = document.createElement('button'); // meteorological
                         var btnEl4 = document.createElement('button'); // reports
-                        btnEl1.textContent = data3.products[0].name;
-                        btnEl1.setAttribute('action', data3.products[0].value);
-                        btnEl1.setAttribute('method', 'get');
-                        btnEl1.setAttribute('target', '_blank');
+                        var aEl1 = document.createElement('a');
+                        var aEl2 = document.createElement('a');
+                        var aEl3 = document.createElement('a');
+                        var aEl4 = document.createElement('a');
+                        aEl1.textContent = data3.products[0].name;
+                        aEl1.setAttribute("href", data3.products[0].value);
+                        aEl1.setAttribute("target", "_blank");
                         btnEl1.classList.add('customBtn');
-                        btnEl2.textContent = data3.products[1].name;
-                        btnEl2.setAttribute('action', data3.products[1].value);
-                        btnEl2.setAttribute('method', 'get');
-                        btnEl2.setAttribute('target', '_blank');
+                        aEl2.textContent = data3.products[1].name;
+                        aEl2.setAttribute('href', data3.products[1].value);
+                        aEl2.setAttribute("target", "_blank");
                         btnEl2.classList.add('customBtn');
-                        btnEl3.textContent = data3.products[2].name;
-                        btnEl3.setAttribute('action', data3.products[2].value);
-                        btnEl3.setAttribute('method', 'get');
-                        btnEl3.setAttribute('target', '_blank');
+                        aEl3.textContent = data3.products[2].name;
+                        aEl3.setAttribute('href', data3.products[2].value);
+                        aEl3.setAttribute("target", "_blank");
                         btnEl3.classList.add('customBtn');
-                        btnEl4.textContent = data3.products[3].name;
-                        btnEl4.setAttribute('action', data3.products[3].value);
-                        btnEl4.setAttribute('method', 'get');
-                        btnEl4.setAttribute('target', '_blank');
+                        aEl4.textContent = data3.products[3].name;
+                        aEl4.setAttribute('href', data3.products[3].value);
+                        aEl4.setAttribute("target", "_blank");
                         btnEl4.classList.add('customBtn');
                         // links to NOAA data pages
                         var currentLinksEl = document.getElementById('currentLinks')
                         //when making liEl, use innerhtml to add <a href="<data2.products[i].value>"data2.products[i].name</a>
 
-
+                        btnEl1.append(aEl1);
+                        btnEl2.append(aEl2);
+                        btnEl3.append(aEl3);
+                        btnEl4.append(aEl4);
                         currentLinksEl.append(btnEl1);
                         currentLinksEl.append(btnEl2);
                         currentLinksEl.append(btnEl3);
