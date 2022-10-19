@@ -38,6 +38,7 @@ A special thanks to my daughter, Yennefer. Every day she proves she is small but
 * Reset: [Eric Meyer reset](https://meyerweb.com/eric/tools/css/reset/)
 * Tailwind CSS: [Tailwind](https://tailwindcss.com/)
 * HTML: [W3 Schools](https://www.w3schools.com/html/)
+* Surfer Slang: [House of Surf](https://houseofsurf.co/surfing-slang/#t-1661628122020)
 
 ## Links
 <!-- Add links using the following format: -->
