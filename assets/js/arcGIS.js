@@ -107,7 +107,7 @@ function renderFutureForecast(data2) {
   while (currentWeatherEl.firstChild) {
       currentWeatherEl.removeChild(currentWeatherEl.firstChild)
   };
-
+  // adds new 5 day forecast to be rendered
   forecastWeather.push(data2.properties.periods[2]);
   forecastWeather.push(data2.properties.periods[4]);
   forecastWeather.push(data2.properties.periods[6]);
@@ -116,7 +116,7 @@ function renderFutureForecast(data2) {
 
   
   for (i = 0; i < forecastWeather.length; i++) {
-     
+    //  generates the relevant data to the page
       function showForecast() {
 
           var containerDiv = document.createElement('div');

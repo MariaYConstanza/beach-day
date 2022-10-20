@@ -1259,6 +1259,7 @@ var currentWeatherEl = document.getElementById('currentWeather');
 var futureWeatherEl = document.getElementById('futureForecast');
 var noaaLinksEl = document.getElementById('noaaLinks');
 var tempCitySearch = [];
+// function to check user input against array //could be updated to search new api input
 function getStation() {
     var beachInput = document.getElementById('beachInput').value.trim();
     let beachInputTarget = beachInput.toLowerCase();
@@ -1378,7 +1379,7 @@ function getStation() {
         stationData(theStation);
     }
 }
-
+// pulls data from NOAA station data - their data comes as links to station pages
 function stationData(theStation) {
 
     fetch("https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/" + theStation + ".json")
@@ -1413,7 +1414,7 @@ function stationData(theStation) {
                     var tempHolder = [];
                     tempHolder.push(data3.products);
 
-
+                    // creates links to surfer specific data
                     function renderLinks() {
                         var btnEl1 = document.createElement('button'); // water levels
                         var btnEl2 = document.createElement('button'); // tide predictions
@@ -1463,7 +1464,7 @@ function stationData(theStation) {
 
         })
 }
-
+// saves user input to local storage // can be updated to display local storage saves
 function savedSearch() {
     var tempCitySearch = document.getElementById("beachInput").value.trim();
     var searched = JSON.parse(localStorage.getItem('searched')) || [];

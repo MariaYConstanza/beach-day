@@ -1,4 +1,4 @@
-// api key 9878347f-b060-480e-b198-7c2bf869297d
+
 // endpoint http://www.worldtides.info/api/v3?
 
 var generateBtn = document.getElementById("displayTides");
@@ -15,7 +15,7 @@ function getTides(event) {
   event.preventDefault();
 
   fetch(
-    "http://www.worldtides.info/api/v3?heights&extremes&date={date}&lat={lat}&lon={lon}&days=7&key=9878347f-b060-480e-b198-7c2bf869297d",
+    "http://www.worldtides.info/api/v3?heights&extremes&date={date}&lat={lat}&lon={lon}&days=7&key=",
     optionsTides
   )
     .then((response) => response.json())
